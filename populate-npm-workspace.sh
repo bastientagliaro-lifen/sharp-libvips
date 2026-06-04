@@ -55,9 +55,11 @@ remove_unused() {
   fi
 }
 
-# Download and extract per-platform binaries (linux-x64 and linux-arm64v8 only)
+# Download and extract per-platform binaries
 extract "linux-x64"
 extract "linux-arm64v8"
+extract "darwin-x64"
+extract "darwin-arm64v8"
 
 # Common header and source files
 cp -r npm/linux-x64/{include,versions.json,THIRD-PARTY-NOTICES.md} npm/dev/
